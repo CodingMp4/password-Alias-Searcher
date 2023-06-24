@@ -9,23 +9,24 @@ import time
 #this includes lower letters and others
 lower = "abcdefghijk" "coding"
 upper = "ABCDEFGHIJK" "coding"
-words = "help" "ear" "dies" "minecratf" "yes" "no" "lol"
+words= "h3lUp0UarKd1esNmFiJn8eYc6rafRt0gyFHesnR0olJo0l"
 numbers = "1234567890"
 
 #combines everything
 all = lower + upper + words + numbers
 #length of the combination
-length = 6
+length = 10
 
-#makes the output
+#makes thw output
 password = "".join(random.sample(all, length))
 
 #prints "generated"
-print (Fore.GREEN + "[+] generated!                                                                                    ") 
+print (Fore.GREEN + "[+] generating!                                                                                    ") 
 
+time.sleep (2)
 
 #prints the password
-print ("[+] your password = " + password)
+print ("[+] generated, your password = " + password)
 
 #prints the thank you message
 print(Fore.GREEN + '                                                            [+] thanks for using!')
@@ -60,9 +61,9 @@ def main(username):
     for i in sites:
         r = requests.get(i+"{}".format(username))
         if r.status_code == 200:
-            print("[+] "+i+"{} --> ".format(username) + Fore.GREEN + "Valid"+ Style.RESET_ALL)
+            print(Fore.GREEN + "[+] "+i+"{} --> ".format(username) + Fore.GREEN + "Found"+ Style.RESET_ALL)
         else:
-            print("[+] "+i+"{} --> ".format(username) + Fore.RED + "Not Valid"+ Style.RESET_ALL)
+            print(Fore.RED + "[+] "+i+"{} --> ".format(username) + Fore.RED + "Not Found"+ Style.RESET_ALL)
 
 main(username) 
 
