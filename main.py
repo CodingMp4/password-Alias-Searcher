@@ -17,7 +17,7 @@ all = lower + upper + words + numbers
 #length of the combination
 length = 6
 
-#makes thw output
+#makes the output
 password = "".join(random.sample(all, length))
 
 #prints "generated"
